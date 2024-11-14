@@ -55,11 +55,11 @@ controls.update()
 
 // 添加环境贴图
 const textCube = new THREE.CubeTextureLoader()
-  .setPath("/环境贴图1/")
+  .setPath("./assets/环境贴图1/")
   .load(["px.jpg", "nx.jpg", "py.jpg", "ny.jpg", "pz.jpg", "nz.jpg"])
 var loader = new GLTFLoader()
 loader.load(
-  "/maikailun/scene.gltf",
+  "./assets/maikailun/scene.gltf",
   function (object) {
     var model = object.scene
     const data = ["Object_7", "Object_18", "Object_158", "Object_144", "Object_90", "Object_65"] //18左车门
