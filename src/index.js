@@ -42,12 +42,12 @@ three.add(axesHelper)
 
 // // 添加轨道控制器
 const controls = new OrbitControls(camera, renderer.domElement)
-// // 设置带阻尼的惯性
-// controls.enableDamping = true
-// // 设置阻尼系数
-// controls.dampingFactor = 0.05
-// // 设置旋转速度
-// controls.autoRotate = true
+// 设置带阻尼的惯性
+controls.enableDamping = true
+// 设置阻尼系数
+controls.dampingFactor = 0.05
+// 设置旋转速度
+controls.autoRotate = true
 
 camera.position.set(5, 3, 10)
 
@@ -55,11 +55,11 @@ controls.update()
 
 // 添加环境贴图
 const textCube = new THREE.CubeTextureLoader()
-  .setPath("./assets/环境贴图1/")
+  .setPath("/环境贴图1/")
   .load(["px.jpg", "nx.jpg", "py.jpg", "ny.jpg", "pz.jpg", "nz.jpg"])
 var loader = new GLTFLoader()
 loader.load(
-  "./assets/maikailun/scene.gltf",
+  "/maikailun/scene.gltf",
   function (object) {
     var model = object.scene
     const data = ["Object_7", "Object_18", "Object_158", "Object_144", "Object_90", "Object_65"] //18左车门
